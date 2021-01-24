@@ -1,0 +1,8 @@
+.profile__info {
+    margin-left: 41px;
+    width: 38.18%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
