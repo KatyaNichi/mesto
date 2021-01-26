@@ -8,23 +8,25 @@
 </head>
 <body class="page">
     <header class="header">
-        <img class="logo__header" src="./images/logo.svg" alt="Логотип">
+        <img class="header__logo" src="./images/logo.svg" alt="Логотип">
     </header>
     <main class="content">
         <section class="profile">
             <img class="profile__avatar" src="images/kusto.jpg" alt="Жак-Ив Кусто">
             <div class="profile__info">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button class="profile__edit" type="button"></button>
-                <p class="profile__profession">Исследователь океана</p>
-            </div>
+                <div class="profine__bio">
+                    <h1 class="profile__name">Жак-Ив Кусто </h1>                   
+                    <p class="profile__profession">Исследователь океана</p>
+                </div> 
+                <button class="profile__edit"></button> 
+            </div>            
             <button class="profile__add-button" type="button"></button>
         </section>
         <section class="popup">
             <div class="popup__container">
                 <button class="popup__close-btn" type="button"></button>
                 <h2 class="popup__header">Редактировать профиль</h2>
-                <form action="#" method="POST">
+                <form class="popup__form" action="#" method="POST">
                     <input class="popup__input popup__input_name" type="text" id="name" name="name" placeholder="Жак-Ив Кусто" required>
                     <input class="popup__input popup__input_profession" type="text" id="prodession" name="profession" placeholder="Исследователь океана" required>
                     <button class="popup__submit-btn" type="submit">Сохранить</button>
@@ -33,45 +35,45 @@
         </section>
         <section class="photo-grid">
             <div class="card">                
-                <img class="card__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+                <img class="card__image" src="images/kirill-pershin-karachaevo.jpg" alt="Карачаевск">
                 <div class="card__description">
                     <p class="card__title">Карачаевск</p>                
-                    <img class="photo-grid_like" src="./images/like.svg">
+                    <img class="card__like" src="./images/like.svg">
                 </div>
             </div>
             <div class="card">
                 <img class="card__image" src="images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
                 <div class="card__description">
                     <p class="card__title">Гора Эльбрус</p>
-                    <img class="photo-grid_like" src="./images/like.svg">
+                    <img class="card__like" src="./images/like.svg">
                 </div>    
             </div>
             <div class="card">
                 <img class="card__image" src="images/kirill-pershindombai.jpg" alt="Домбай">
                 <div class="card__description">
                     <p class="card__title">Домбай</p>
-                    <img class="photo-grid_like" src="./images/like.svg">
+                    <img class="card__like" src="./images/like.svg">
                 </div>    
             </div>
             <div class="card">
                 <img class="card__image" src="images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
                 <div class="card__description">
                     <p class="card__title">Гора Эльбрус</p>
-                    <img class="photo-grid_like" src="./images/like.svg">
+                    <img class="card__like" src="./images/like.svg">
                 </div>
             </div>    
             <div class="card">
                 <img class="card__image" src="images/kirill-pershindombai.jpg" alt="Домбай">
                 <div class="card__description">
                     <p class="card__title">Домбай</p>
-                    <img class="photo-grid_like" src="./images/like.svg">
+                    <img class="card__like" src="./images/like.svg">
                 </div>    
             </div>
             <div class="card">
-                <img class="card__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Ч...">
+                <img class="card__image" src="images/kirill-pershin-karachaevo.jpg" alt="Карачаево-Ч...">
                 <div class="card__description">               
                     <p class="card__title">Карачаево-Черкесская республика</p>
-                    <img class="photo-grid_like" src="./images/like.svg">
+                    <img class="card__like" src="./images/like.svg">
                 </div>
             </div>
         </section>
@@ -79,5 +81,6 @@
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
