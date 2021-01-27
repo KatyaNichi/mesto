@@ -5,10 +5,10 @@
     font-weight: normal;
     }
 @font-face {
-    src: url("Inter-Bold.woff");
-    src: url("Inter-Bold.woff2");
+    src: url("Inter-Medium.woff");
+    src: url("Inter-Medium.woff2");
     font-family: 'Inter';
-    font-weight: 700;
+    font-weight: 500;
 }
 
 @font-face {
