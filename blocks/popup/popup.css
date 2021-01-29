@@ -1,5 +1,5 @@
 .popup {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -9,8 +9,8 @@
     display: none;
 }
 
-@media screen and (max-width: 767px) and (min-width: 320px) {
+@media screen and (max-width: 767px) {
     .popup {
-        padding-top: 76.62px;
+        padding-top: 72.62px;
     }
 }

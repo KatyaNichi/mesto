@@ -1,10 +1,12 @@
 .profile__avatar {
     border-radius: 50%;
-    width: 168.75px;
+    width: 127.5px;
+    height: 127.5px;
+    object-fit: contain;
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
-    .profile__avatar{
+    .profile__avatar {
         width: 110px;
     }
 }

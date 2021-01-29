@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 31px;
+    align-items: center;
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
@@ -13,7 +14,8 @@
         padding-bottom: 21px;
     }
 }
-@media screen and (max-width: 767px) and (min-width: 320px) {
+
+@media screen and (max-width: 767px) {
     .card__description {
         width: 85.41%;
         padding-top: 15px;

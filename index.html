@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>mesto</title>
+    <title>Место</title>
 </head>
+
 <body class="page">
     <header class="header">
         <img class="header__logo" src="./images/logo.svg" alt="Логотип">
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="images/kusto.jpg" alt="Жак-Ив Кусто">
+            <img class="profile__avatar" src="./images/kusto.jpg" alt="Аватар пользователя">
             <div class="profile__info">
                 <div class="profile__bio">
-                    <h1 class="profile__name">Жак-Ив Кусто </h1>                   
+                    <h1 class="profile__name">Жак-Ив Кусто </h1>
                     <p class="profile__profession">Исследователь океана</p>
-                </div> 
-                <button class="profile__edit"></button> 
-            </div>            
-            <button class="profile__add-button" type="button"></button>
+                </div>
+                <button class="profile__edit" type="button" aria-label="Изменить"></button>
+            </div>
+            <button class="profile__add-button" type="button" aria-label="Добавить"></button>
+        </section>
+        <section class="photo-grid">
+            <article class="card">
+                <img class="card__image" src="./images/kirill-pershin-karachaevo.jpg" alt="Карачаевск">
+                <div class="card__description">
+                    <h2 class="card__title">Карачаевск</h2>
+                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img class="card__image" src="./images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
+                <div class="card__description">
+                    <h2 class="card__title">Гора Эльбрус</h2>
+                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img class="card__image" src="./images/kirill-pershindombai.jpg" alt="Домбай">
+                <div class="card__description">
+                    <h2 class="card__title">Домбай</h2>
+                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img class="card__image" src="./images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
+                <div class="card__description">
+                    <h2 class="card__title">Гора Эльбрус</h2>
+                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img class="card__image" src="./images/kirill-pershindombai.jpg" alt="Домбай">
+                <div class="card__description">
+                    <h2 class="card__title">Домбай</h2>
+                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img class="card__image" src="./images/kirill-pershin-karachaevo.jpg" alt="Карачаево-Ч...">
+                <div class="card__description">
+                    <h2 class="card__title">Карачаево-Черкесская республика</h2>
+                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
+                </div>
+            </article>
         </section>
         <section class="popup">
             <div class="popup__container">
                 <button class="popup__close-btn" type="button"></button>
                 <h2 class="popup__header">Редактировать профиль</h2>
-                <form class="popup__form" action="#" method="POST">
-                    <input class="popup__input popup__input_name" type="text" id="name" name="name" placeholder="Жак-Ив Кусто" required>
-                    <input class="popup__input popup__input_profession" type="text" id="prodession" name="profession" placeholder="Исследователь океана" required>
+                <form class="popup__form" action="#" method="POST" name="popup__form">
+                    <input class="popup__input popup__input_type_name" type="text" id="name" name="name" placeholder="Имя" required>
+                    <input class="popup__input popup__input_type_profession" type="text" id="profession" name="profession" placeholder="Профессия" required>
                     <button class="popup__submit-btn" type="submit">Сохранить</button>
-                </form>                
-            </div>            
-        </section>
-        <section class="photo-grid">
-            <div class="card">                
-                <img class="card__image" src="images/kirill-pershin-karachaevo.jpg" alt="Карачаевск">
-                <div class="card__description">
-                    <p class="card__title">Карачаевск</p>                
-                    <img class="card__like" src="./images/like.svg" alt="like">
-                </div>
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
-                <div class="card__description">
-                    <p class="card__title">Гора Эльбрус</p>
-                    <img class="card__like" src="./images/like.svg" alt="like">
-                </div>    
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/kirill-pershindombai.jpg" alt="Домбай">
-                <div class="card__description">
-                    <p class="card__title">Домбай</p>
-                    <img class="card__like" src="./images/like.svg" alt="like">
-                </div>    
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
-                <div class="card__description">
-                    <p class="card__title">Гора Эльбрус</p>
-                    <img class="card__like" src="./images/like.svg" alt="like">
-                </div>
-            </div>    
-            <div class="card">
-                <img class="card__image" src="images/kirill-pershindombai.jpg" alt="Домбай">
-                <div class="card__description">
-                    <p class="card__title">Домбай</p>
-                    <img class="card__like" src="./images/like.svg" alt="like">
-                </div>    
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/kirill-pershin-karachaevo.jpg" alt="Карачаево-Ч...">
-                <div class="card__description">               
-                    <p class="card__title">Карачаево-Черкесская республика</p>
-                    <img class="card__like" src="./images/like.svg" alt="like">
-                </div>
+                </form>
             </div>
         </section>
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
+
 </html>
