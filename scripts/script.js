@@ -5,12 +5,13 @@ let popupInputName = document.querySelector('.popup__input_type_name');
 let popupInputProfession = document.querySelector('.popup__input_type_profession');
 let profileName = document.querySelector('.profile__name');
 let profileProfession = document.querySelector('.profile__profession');
+let formElement = document.querySelector('.popup__form');
 
 
 function openPopup() {
     popup.classList.add('popup_opened');
-    popupInputName.setAttribute('placeholder', profileName.textContent);
-    popupInputProfession.setAttribute('placeholder', profileProfession.textContent);
+    popupInputName.value = profileName.textContent;
+    popupInputProfession.value = profileProfession.textContent;
 }
 
 function closePopup() {
@@ -20,7 +21,6 @@ function closePopup() {
 
 
 // Находим форму в DOM
-let formElement = document.querySelector('.popup__form');
 // Находим поля формы в DOM
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
