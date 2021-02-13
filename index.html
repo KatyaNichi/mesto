@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
     <title>Место</title>
+    <script src="./scripts/script.js" defer></script>
 </head>
 
 <body class="page">
@@ -24,49 +25,18 @@
             </div>
             <button class="profile__add-button" type="button" aria-label="Добавить"></button>
         </section>
+
         <section class="photo-grid">
+            <template class="template">
             <article class="card">
-                <img class="card__image" src="./images/kirill-pershin-karachaevo.jpg" alt="Карачаевск">
+                <img class="card__image" src="" alt="">
+                <button class="card__remove" type="button" aria-label="Удалить"></button>
                 <div class="card__description">
                     <h2 class="card__title">Карачаевск</h2>
                     <button class="card__like" type="button" aria-label="Мне нравится"></button>
                 </div>
             </article>
-            <article class="card">
-                <img class="card__image" src="./images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
-                <div class="card__description">
-                    <h2 class="card__title">Гора Эльбрус</h2>
-                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
-                </div>
-            </article>
-            <article class="card">
-                <img class="card__image" src="./images/kirill-pershindombai.jpg" alt="Домбай">
-                <div class="card__description">
-                    <h2 class="card__title">Домбай</h2>
-                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
-                </div>
-            </article>
-            <article class="card">
-                <img class="card__image" src="./images/kirill-pershinelbrus.jpg" alt="Гора Эльбрус">
-                <div class="card__description">
-                    <h2 class="card__title">Гора Эльбрус</h2>
-                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
-                </div>
-            </article>
-            <article class="card">
-                <img class="card__image" src="./images/kirill-pershindombai.jpg" alt="Домбай">
-                <div class="card__description">
-                    <h2 class="card__title">Домбай</h2>
-                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
-                </div>
-            </article>
-            <article class="card">
-                <img class="card__image" src="./images/kirill-pershin-karachaevo.jpg" alt="Карачаево-Ч...">
-                <div class="card__description">
-                    <h2 class="card__title">Карачаево-Черкесская республика</h2>
-                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
-                </div>
-            </article>
+        </template>
         </section>
         <div class="popup">
             <div class="popup__container">
@@ -79,11 +49,30 @@
                 </form>
             </div>
         </div>
+        <div class="popup popup-newplace">
+            <div class="popup__container">
+                <button class="popup__close-btn" type="button"></button>
+                <h2 class="popup__header">Новое место</h2>
+                <form class="popup__form" action="#" method="POST" name="newplaceForm">
+                    <input class="popup__input popup__input_type_placename" type="text" id="name" name="placename" placeholder="Название" required>
+                    <input class="popup__input popup__input_type_placelink" type="text" id="profession" name="profession" placeholder="Ссылка на картинку" required>
+                    <button class="popup__submit-btn popup-newplace__submit-btn" type="submit">Создать</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup-image">
+            <div class="popup-image__container">
+                <button class="popup__close-btn popup-image__close-btn" type="button"></button>
+                <img class="popup-image__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="">
+                <p class="popup-image__description">recnj</p>
+            </div>
+        </div>
+
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <script src="./scripts/script.js"></script>
+
 </body>
 
 </html>

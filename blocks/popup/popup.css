@@ -5,7 +5,9 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visability 0s, opacity 0.7s;
 }
 
 @media screen and (max-width: 767px) {

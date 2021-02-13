@@ -1,0 +1,9 @@
+.popup-image__close-btn {
+    margin: 0 -56px 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .popup-image__close-btn {
+        margin: -50.38px 0 auto auto;
+    }
+}
