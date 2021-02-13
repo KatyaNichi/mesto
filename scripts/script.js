@@ -1,6 +1,5 @@
-const popup = document.querySelector('.popup');
 const openBtn = document.querySelector('.profile__edit');
-const closeBtn = popup.querySelector('.popup__close-btn');
+const closeBtn = document.querySelector('.popup__close-btn');
 const popupInputName = document.querySelector('.popup__input_type_name');
 const popupInputProfession = document.querySelector('.popup__input_type_profession');
 const popupInputPlaceLink = document.querySelector('.popup__input_type_placelink');
@@ -20,6 +19,8 @@ const popedImage = document.querySelector('.popup-image__image');
 const popupDescription = document.querySelector('.popup-image__description');
 const photoGrid = document.querySelector('.photo-grid');
 const templateEl = document.querySelector('.template');
+const popupProfile = document.querySelector('.popup-profile');
+const closeImageBtn = document.querySelector('.popup-image__close-btn');
 const initialCards = [{
         name: 'Архыз',
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -50,8 +51,7 @@ const initialCards = [{
 //функция открытия попапов
 function openPopup(item) {
     item.classList.add('popup_opened');
-    popupInputName.value = profileName.textContent;
-    popupInputProfession.value = profileProfession.textContent;
+
 }
 
 
@@ -70,7 +70,7 @@ function formSubmitHandler(evt) {
     profileName.textContent = getNameInput;
     profileProfession.textContent = getJobInput;
 
-    closePopup(popup);
+    closePopup(popupProfile);
 }
 
 
@@ -84,7 +84,8 @@ function formAddNewCart(evt) {
 
     const listItem = getItem({ name: getPlaceName, link: getPlaceLink });
     photoGrid.prepend(listItem);
-    popupInput.value = ''
+    popupInputPlaceLink.value = ''
+    popupInputPlaceName.value = ''
     closePopup(popupNewPlace);
 }
 
@@ -123,12 +124,6 @@ function getItem(item) {
         popupDescription.textContent = item.name;
     });
 
-
-    const closeImageBtn = document.querySelector('.popup-image__close-btn');
-    closeImageBtn.addEventListener('click', () => {
-        closePopup(popupImage);
-    })
-
     return newItem;
 }
 render();
@@ -147,7 +142,9 @@ formElement.addEventListener('submit', formSubmitHandler);
 formElementCard.addEventListener('submit', formAddNewCart);
 
 openBtn.addEventListener('click', () => {
-    openPopup(popup);
+    openPopup(popupProfile);
+    popupInputName.value = profileName.textContent;
+    popupInputProfession.value = profileProfession.textContent;
 });
 
 addNewPlace.addEventListener('click', () => {
@@ -155,9 +152,14 @@ addNewPlace.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => {
-    closePopup(popup);
+    closePopup(popupProfile);
 })
 
 popupNewPlaceCloseBtn.addEventListener('click', () => {
     closePopup(popupNewPlace);
+})
+
+
+closeImageBtn.addEventListener('click', () => {
+    closePopup(popupImage);
 })
