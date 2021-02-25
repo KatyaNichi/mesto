@@ -18,6 +18,16 @@
     transition: background-color 3s;
 }
 
+.popup__submit-btn:disabled {
+    background: #E5E5E5;
+    color: #000000;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 @media screen and (max-width: 767px) {
     .popup__submit-btn {
         width: 100%;

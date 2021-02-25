@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
     <title>Место</title>
+
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/script.js" defer></script>
 </head>
 
@@ -42,9 +44,15 @@
             <div class="popup__container">
                 <button class="popup__close-btn" type="button"></button>
                 <h2 class="popup__header">Редактировать профиль</h2>
-                <form class="popup__form" action="#" method="POST" name="profineForm">
-                    <input class="popup__input popup__input_type_name" type="text" id="name" name="name" placeholder="Имя" required>
-                    <input class="popup__input popup__input_type_profession" type="text" id="profession" name="profession" placeholder="Профессия" required>
+                <form class="popup__form" action="#" method="POST" name="profineForm" novalidate>
+                    <section class="form__section">
+                        <input class="popup__input popup__input_type_name" type="text" id="name" name="name" placeholder="Имя" minlength="2" maxlength="40" required>
+                        <span class="popup__input-error" id="name-error"></span>
+                    </section>
+                    <section class="form__section">
+                        <input class="popup__input popup__input_type_profession" type="text" id="profession" name="profession" placeholder="Профессия" minlength="2" maxlength="200" required>
+                        <span class="popup__input-error" id="profession-error"></span>
+                    </section>
                     <button class="popup__submit-btn" type="submit">Сохранить</button>
                 </form>
             </div>
@@ -53,10 +61,16 @@
             <div class="popup__container">
                 <button class="popup__close-btn" type="button"></button>
                 <h2 class="popup__header">Новое место</h2>
-                <form class="popup__form" action="#" method="POST" name="newplaceForm">
-                    <input class="popup__input popup__input_type_placename" type="text" id="placename" name="placename" placeholder="Название" required>
-                    <input class="popup__input popup__input_type_placelink" type="text" id="link" name="placelink" placeholder="Ссылка на картинку" required>
-                    <button class="popup__submit-btn popup-newplace__submit-btn" type="submit">Создать</button>
+                <form class="popup__form popup__form_add" action="#" method="POST" name="newplaceForm" novalidate>
+                    <section class="form__section">
+                        <input class="popup__input popup__input_type_placename" type="text" id="placename" name="placename" minlength="2" maxlength="30" placeholder="Название" required>
+                        <span class="popup__input-error" id="placename-error"></span>
+                    </section>
+                    <section class="form__section">
+                        <input class="popup__input popup__input_type_placelink" type="url" id="link" name="placelink" placeholder="Ссылка на картинку" required>
+                        <span class="popup__input-error" id="link-error"></span>
+                    </section>
+                    <button class="popup__submit-btn popup-newplace__submit-btn popup__submit-btn_inactive" type="submit">Создать</button>
                 </form>
             </div>
         </div>
