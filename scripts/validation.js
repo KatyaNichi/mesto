@@ -23,7 +23,7 @@ function enableValidation(elements) {
         if (isInputNotValid) {
             const errorMessage = inputElement.validationMessage;
             showInputError(formElement, inputElement, errorMessage);
-            console.log("ghbdtn");
+
         } else {
             hideInputError(formElement, inputElement);
         }

@@ -192,13 +192,11 @@ enableValidation({
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__submit-btn'
 });
-console.log('Form 1');
 
 enableValidation({
     formSelector: '.popup__form_add',
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__submit-btn'
 });
-console.log('Form 2');
 
 addEventListener
