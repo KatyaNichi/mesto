@@ -22,6 +22,7 @@ const photoGrid = document.querySelector('.photo-grid');
 const templateEl = document.querySelector('.template');
 const popupProfile = document.querySelector('.popup-profile');
 const closeImageBtn = document.querySelector('.popup-image__close-btn');
+const submitBtn = popupNewPlace.querySelector('.popup-newplace__submit-btn');
 const initialCards = [{
         name: 'Архыз',
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -76,7 +77,6 @@ function formSubmitHandler(evt) {
     const getJobInput = popupInputProfession.value;
     profileName.textContent = getNameInput;
     profileProfession.textContent = getJobInput;
-
     closePopup(popupProfile);
 }
 
@@ -93,6 +93,7 @@ function formAddNewCart(evt) {
     photoGrid.prepend(listItem);
     popupInputPlaceLink.value = ''
     popupInputPlaceName.value = ''
+    submitBtn.classList.add('popup__submit-btn_inactive');
     closePopup(popupNewPlace);
 }
 
@@ -159,44 +160,18 @@ addNewPlace.addEventListener('click', () => {
     popupInputPlaceLink.value = '';
 });
 
-closeBtn.addEventListener('click', () => {
-    closePopup(popupProfile);
+
+formElement.addEventListener('submit', formSubmitHandler);
+
+const popups = document.querySelectorAll('.popup')
+
+popups.forEach((popup) => {
+    popup.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup)
+        }
+        if (evt.target.classList.contains('popup__close-btn')) {
+            closePopup(popup)
+        }
+    })
 })
-
-
-popupNewPlaceCloseBtn.addEventListener('click', () => {
-    closePopup(popupNewPlace);
-})
-
-
-closeImageBtn.addEventListener('click', () => {
-    closePopup(popupImage);
-})
-
-
-popupImage.addEventListener('click', closeOverlay);
-popupNewPlace.addEventListener('click', closeOverlay);
-popupProfile.addEventListener('click', closeOverlay);
-
-function closeOverlay(evt) {
-    if (evt.target === evt.currentTarget) {
-        closePopup(evt.target);
-    }
-}
-
-
-
-
-enableValidation({
-    formSelector: '.popup__form',
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__submit-btn'
-});
-
-enableValidation({
-    formSelector: '.popup__form_add',
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__submit-btn'
-});
-
-addEventListener
