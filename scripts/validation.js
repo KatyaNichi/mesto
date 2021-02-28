@@ -8,7 +8,7 @@ enableValidation({
 });
 
 function enableValidation(elements) {
-    let listForms = document.querySelectorAll(elements.formSelector);
+    const listForms = document.querySelectorAll(elements.formSelector);
     listForms.forEach(form => validate(elements, form));
 }
 
@@ -55,7 +55,6 @@ function validate(elements, formElement) {
     };
 
     const setEventListeners = (formElement) => {
-        const inputList = Array.from(formElement.querySelectorAll(elements.inputSelector));
 
         inputList.forEach((inputElement) => {
             inputElement.addEventListener('input', function() {
