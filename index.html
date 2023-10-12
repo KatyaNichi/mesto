@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>Место</title>
+    <title>Mesto</title>
 
 </head>
 
@@ -15,25 +15,25 @@
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="./images/kusto.jpg" alt="Аватар пользователя">
+            <img class="profile__avatar" src="./images/kusto.jpg" alt="Users image">
             <div class="profile__info">
                 <div class="profile__bio">
-                    <h1 class="profile__name">Жак-Ив Кусто </h1>
-                    <p class="profile__profession">Исследователь океана</p>
+                    <h1 class="profile__name">Jacques Cousteau </h1>
+                    <p class="profile__profession">French oceanographer</p>
                 </div>
-                <button class="profile__edit" type="button" aria-label="Изменить"></button>
+                <button class="profile__edit" type="button" aria-label="Edit"></button>
             </div>
-            <button class="profile__add-button" type="button" aria-label="Добавить"></button>
+            <button class="profile__add-button" type="button" aria-label="Add"></button>
         </section>
 
         <section class="photo-grid">
             <template class="template">
             <article class="card">
-                <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="картинка">
-                <button class="card__remove" type="button" aria-label="Удалить"></button>
+                <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="image">
+                <button class="card__remove" type="button" aria-label="Remove"></button>
                 <div class="card__description">
-                    <h2 class="card__title">Карачаевск</h2>
-                    <button class="card__like" type="button" aria-label="Мне нравится"></button>
+                    <h2 class="card__title">Karachayevsk</h2>
+                    <button class="card__like" type="button" aria-label="Like it"></button>
                 </div>
             </article>
         </template>
@@ -41,14 +41,14 @@
         <div class="popup popup-profile">
             <div class="popup__container">
                 <button class="popup__close-btn" type="button"></button>
-                <h2 class="popup__header">Редактировать профиль</h2>
+                <h2 class="popup__header">Edit profile</h2>
                 <form class="popup__form" action="#" method="POST" name="profineForm" novalidate>
                     <section class="popup__section">
-                        <input class="popup__input popup__input_type_name" type="text" id="name" name="name" placeholder="Имя" minlength="2" maxlength="40" required>
+                        <input class="popup__input popup__input_type_name" type="text" id="name" name="name" placeholder="Name" minlength="2" maxlength="40" required>
                         <span class="popup__input-error" id="name-error"></span>
                     </section>
                     <section class="popup__section">
-                        <input class="popup__input popup__input_type_profession" type="text" id="profession" name="profession" placeholder="Профессия" minlength="2" maxlength="200" required>
+                        <input class="popup__input popup__input_type_profession" type="text" id="profession" name="profession" placeholder="Profession" minlength="2" maxlength="200" required>
                         <span class="popup__input-error" id="profession-error"></span>
                     </section>
                     <button class="popup__submit-btn" type="submit">Сохранить</button>
@@ -58,24 +58,24 @@
         <div class="popup popup-newplace">
             <div class="popup__container">
                 <button class="popup__close-btn" type="button"></button>
-                <h2 class="popup__header">Новое место</h2>
+                <h2 class="popup__header">New place</h2>
                 <form class="popup__form popup__form_add" action="#" method="POST" name="newplaceForm" novalidate>
                     <section class="popup__section">
                         <input class="popup__input popup__input_type_placename" type="text" id="placename" name="placename" minlength="2" maxlength="30" placeholder="Название" required>
                         <span class="popup__input-error" id="placename-error"></span>
                     </section>
                     <section class="popup__section">
-                        <input class="popup__input popup__input_type_placelink" type="url" id="link" name="placelink" placeholder="Ссылка на картинку" required>
+                        <input class="popup__input popup__input_type_placelink" type="url" id="link" name="placelink" placeholder="Link to image" required>
                         <span class="popup__input-error" id="link-error"></span>
                     </section>
-                    <button class="popup__submit-btn popup-newplace__submit-btn popup__submit-btn_inactive" type="submit">Создать</button>
+                    <button class="popup__submit-btn popup-newplace__submit-btn popup__submit-btn_inactive" type="submit">Submit</button>
                 </form>
             </div>
         </div>
         <div class="popup popup-image">
             <div class="popup-image__container">
                 <button class="popup__close-btn popup-image__close-btn" type="button"></button>
-                <img class="popup-image__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="картинка">
+                <img class="popup-image__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="image">
                 <p class="popup-image__description"></p>
             </div>
         </div>
